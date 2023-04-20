@@ -50,7 +50,21 @@ This table is useful for Runtime improvements:
 There are some deprecations for Java 17:
 - Security Manager (JEP 411)
 - Applet API (JEP 398)
-- 
+
+Removals:
+- Nashorn (Javascript Engine) - (JEP 372)
+- CMS Garbage Collector - (JEP 363)
+
+Other changes:
+- Strongly encapsulated JDK Internals - continued from start of module system
+  - no relax on --illegal-access=permit
+  - Some internal APIs remain available e.g. sun.misc.Unsafe
+  - Can still declare --add-opens for reflective access
+
+Nice list of new methods:
+https://docs.oracle.com/en/java/javase/17/docs/api/new-list.html
+
+
 
 When we run the application, the logs show that we are using Tomcat 10.1.7:
 
